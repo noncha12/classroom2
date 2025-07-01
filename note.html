@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>โน้ตหลายอัน</title>
+
+  <!-- ลิงก์ไฟล์ CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ฟอนต์ Itim + Prompt -->
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt&display=swap" rel="stylesheet" />
+
+  <!-- Favicon (ไอคอนบนแท็บเบราว์เซอร์) -->
+  <link rel="icon" href="image.png" type="image/png" />
+</head>
+
+<body class="note-page-theme">
+
+  <div class="note-container">
+    <!-- หัวข้อหลัก -->
+    <h1>
+      <img src="stack-of-books.png" alt="icon" style="width: 32px; vertical-align: middle; margin-right: 8px;">
+      จดโน้ตหลายอัน
+    </h1>
+
+    <!-- ฟอร์มกรอกโน้ต -->
+    <input type="text" id="noteTitle" placeholder="ตั้งชื่อโน้ต..." />
+    <textarea id="noteInput" placeholder="เขียนเนื้อหาโน้ต..."></textarea>
+
+    <!-- ปุ่มบันทึก -->
+    <button class="note-save-btn" id="saveBtn" onclick="saveNote()">
+      <img src="floppy-disk.png" alt="save icon" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      บันทึกโน้ต
+    </button>
+
+    <!-- ปุ่มล้าง -->
+    <button class="note-clear-btn" onclick="clearForm()">
+      <img src="clean.png" alt="clear icon" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      ล้างฟอร์ม
+    </button>
+
+    <!-- ปุ่มกลับ -->
+    <button class="note-back-btn" onclick="location.href='index.html'">
+      🏠 กลับหน้าแรก
+    </button>
+
+    <!-- รายการโน้ต -->
+    <h2>📌 รายการโน้ต:</h2>
+    <ul id="noteList" class="note-list"></ul>
+  </div>
+
+  <!-- สคริปต์หลัก -->
+  <script src="script.js"></script>
+</body>
+</html>
